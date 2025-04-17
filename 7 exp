@@ -1,4 +1,4 @@
-from selenium import webdriver
+7from selenium import webdriver
 
  from selenium.webdriver.common.by import By
 
@@ -21,19 +21,10 @@ driver.find_element(By.ID, "email").send_keys("test@example.com")
 driver.find_element(By.ID, "confirm-password").send_keys("strongpass")
 
  driver.find_element(By.ID, "submit-btn").click()
-
+time sleep(1)
 
 msg = driver.find_element(By.ID, "msg").text
 
 print("result",msg)
 driver.quit()
 
-time.sleep(1)
-
-print("Result:", msg)
-
-23
-
-24 driver.quit()
-
-25
