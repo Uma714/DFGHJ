@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: registration-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: registration-app
+  template:
+    metadata:
+      labels:
+        app: registration-app
+    spec:
+      containers:
+        - name: registration-app
+          image: registration_form:latest  # Ensure this image is available in Minikube
+          imagePullPolicy: Never
+          ports:
+            - containerPort: 5000
+
